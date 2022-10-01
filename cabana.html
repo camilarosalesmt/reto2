@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>RETO 2</title>
+      <link rel="preload" href="css/normalize.css" as="style">
+      <link href="stylesheet" href="css/normalize.css">
+      <link rel = "preconnect" href = "https://fonts.googleapis.com">
+      <link rel = "preconnect" href = "https://fonts.gstatic.com" crossorigin>
+      <link href = "https: //fonts.googleapis.com/css2? family = Krub: wght @ 400; 700 & display = swap "rel =" stylesheet ">
+      <link rel="preload" href="css/styles.css" as="style">
+      <link href="css/styles.css" rel="stylesheet" >
+      <script  src="js/peticiones_ajax_cabana.js"></script>
+  
+      <!-- <script  src="js/jquery-3.6.1.js"></script> -->
+        
+      <script src="https://code.jquery.com/jquery-3.6.1.js" 
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" 
+        crossorigin="anonymous">
+      </script>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">Cabañas<span> G13 MT</span> </h1>
+    </header>
+
+    <div class="background">
+      <nav class="barra">
+        <a href="cabana.html">Cabañas</a>
+        <a href="client.html">Clientes</a>
+        <a href="message.html">Mensajes</a>
+      </nav>
+    </div>
+
+<section class="hero">
+    <div class="contenido-hero">
+      <div class="ubicacion">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="92" height="92" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffbf00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="11" r="3" />
+            <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+          </svg>
+          <p>Mision Tic</p>
+    </div>
+    </div>
+</section>
+  <main class="cuerpo">
+    <section>
+         <div>
+          <h3>Formulario De Cabañas</h3>
+
+          <input type="submit" id="btnBuscarID" value="Buscar ID" onclick="consultaID('#id')">
+            <form action="/action_page.php">
+              <input   type="number" id="codigo" name="codigo" placeholder="Ingresa un ID">
+              <input type="text" id="brand" name="brand" placeholder="Brand.."><br>
+              <input type="text" id="rooms" name="rooms" placeholder="Rooms..">
+              <input type="text" id="category_id" name="category_id" placeholder="Category By Id..">
+              <input type="text" id="name" name="name" placeholder=" name..">
+
+            </form>
+            <input  type="submit" id="limpar" value="Limpiar Cabañas" onclick="limpiar_cabaña()">
+            <input type="submit" id="mostrar" value="Mostrar Cabañas" onclick="mostrar_cabaña()">
+            <input type="submit" id="agregar" value="Agregar Cabañas" onclick="agregar_cabaña()">
+            <input type="submit" id="actualizar" value="Atualizar Cabañas" onclick="actualizar_cabaña()">
+          </div>
+     </section> 
+  </main><br>
+
+  <main class="cuerpo">
+    <section>
+          <div class="columns">
+            <div class="column">
+                <h3 class="is-size-3"><b>Resultados</b></h3>
+                <div id="Resultado"></div>
+               
+            </div>
+           </div>
+     </section> 
+  </main>
+  <br>
+
+   
+
+<div class="footer">
+  <h2><b>Todos los derechos reservados</b></h2>
+</div>
+
+  </body>
+</html>
